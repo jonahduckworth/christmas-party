@@ -1,3 +1,44 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "prettier"],
+  "plugins": [
+    "simple-import-sort",
+    "import",
+    "unused-imports",
+    "unicorn",
+    "filenames",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "@next/next/link-passhref": "off",
+    "react/no-unescaped-entities": "off",
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": "error",
+    "import/first": "error",
+    "import/no-duplicates": "error",
+    "import/no-namespace": "error",
+    "import/order": "error",
+    "unused-imports/no-unused-imports": "error",
+    "no-unused-vars": "off",
+    "unicorn/filename-case": [
+      "error",
+      {
+        "cases": {
+          "camelCase": true,
+          "pascalCase": true,
+          "kebabCase": true,
+          "snakeCase": false
+        }
+      }
+    ],
+    "filenames/match-exported": 2
+  },
+  "overrides": [
+    {
+      "files": ["**/pages/**", "**/app/**"],
+      "rules": {
+        "filenames/match-exported": "off"
+      }
+    }
+  ]
 }
