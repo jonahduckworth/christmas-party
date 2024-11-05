@@ -7,6 +7,9 @@ export async function GET() {
   try {
     const posts = await prisma.partyPost.findMany({
       orderBy: { createdAt: "desc" },
+      where: {
+        isSpam: false,
+      },
     });
     return NextResponse.json(posts);
   } catch (error) {
@@ -30,20 +33,20 @@ export async function POST(request: Request) {
 
     const { isSpam } = await spamCheck.json();
 
-    if (isSpam) {
-      return NextResponse.json(
-        { error: "Message detected as spam" },
-        { status: 400 },
-      );
-    }
-
     const post = await prisma.partyPost.create({
       data: {
         content,
         author,
-        isSpam: false,
+        isSpam: isSpam,
       },
     });
+
+    if (isSpam) {
+      return NextResponse.json(
+        { error: "You're a naughty little elf! 🎅🎄" },
+        { status: 400 },
+      );
+    }
 
     return NextResponse.json(post);
   } catch (error) {

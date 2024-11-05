@@ -44,7 +44,7 @@ export default function PartyDetails() {
         🎅 Join us for Holiday Cheer! 🎅
       </h2>
       <div className="space-y-2">
-        <p>Date: December 14th, 2024</p>
+        <p>Date: December 14th</p>
         <p>Time: 7:00 PM</p>
         <p>Location: Sam & Jonah&apos;s House</p>
       </div>

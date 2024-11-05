@@ -105,21 +105,23 @@ export default function Guestbook() {
       </form>
 
       <AnimatePresence>
-        {entries.map((entry) => (
-          <motion.div
-            key={entry.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="bg-white/80 border-2 border-dashed border-red-600 m-2 p-4 text-left rounded"
-          >
-            <strong>{entry.author}</strong>
-            <p>{entry.content}</p>
-            <p className="text-sm text-gray-500 mt-2">
-              {new Date(entry.createdAt).toLocaleDateString()}
-            </p>
-          </motion.div>
-        ))}
+        <div className="max-h-[400px] overflow-y-auto scrollbar-hide">
+          {entries.map((entry) => (
+            <motion.div
+              key={entry.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="bg-white/80 border-2 border-dashed border-red-600 m-2 p-4 text-left rounded"
+            >
+              <strong>{entry.author}</strong>
+              <p>{entry.content}</p>
+              <p className="text-sm text-gray-500 mt-2">
+                {new Date(entry.createdAt).toLocaleDateString()}
+              </p>
+            </motion.div>
+          ))}
+        </div>
       </AnimatePresence>
     </div>
   );
