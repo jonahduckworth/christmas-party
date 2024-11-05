@@ -13,7 +13,7 @@ export default function RsvpButton() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const response = await fetch("/api/rsvp", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -39,22 +39,24 @@ export default function RsvpButton() {
           repeatType: "reverse",
         }}
       >
-        <button
-          className="rsvp-button"
-          onClick={() => setShowForm(true)}
-        >
+        <button className="rsvp-button" onClick={() => setShowForm(true)}>
           CLICK HERE TO RSVP!!!
         </button>
       </motion.div>
 
       {showForm && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center">
-          <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg space-y-4">
+          <form
+            onSubmit={handleSubmit}
+            className="bg-white p-6 rounded-lg space-y-4"
+          >
             <input
               type="text"
               placeholder="First Name"
               value={formData.firstName}
-              onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, firstName: e.target.value })
+              }
               className="w-full p-2 border rounded"
               required
             />
@@ -62,7 +64,9 @@ export default function RsvpButton() {
               type="text"
               placeholder="Last Name"
               value={formData.lastName}
-              onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, lastName: e.target.value })
+              }
               className="w-full p-2 border rounded"
               required
             />
@@ -70,12 +74,17 @@ export default function RsvpButton() {
               type="email"
               placeholder="Email"
               value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
               className="w-full p-2 border rounded"
               required
             />
             <div className="flex gap-2">
-              <button type="submit" className="bg-red-600 text-white px-4 py-2 rounded">
+              <button
+                type="submit"
+                className="bg-red-600 text-white px-4 py-2 rounded"
+              >
                 Submit RSVP
               </button>
               <button

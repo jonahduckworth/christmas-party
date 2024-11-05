@@ -1,18 +1,18 @@
-import { PrismaClient } from '@prisma/client';
-import { NextResponse } from 'next/server';
+import { PrismaClient } from "@prisma/client";
+import { NextResponse } from "next/server";
 
 const prisma = new PrismaClient();
 
 export async function GET() {
   try {
     const posts = await prisma.partyPost.findMany({
-      orderBy: { createdAt: 'desc' },
+      orderBy: { createdAt: "desc" },
     });
     return NextResponse.json(posts);
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch posts' },
-      { status: 500 }
+      { error: "Failed to fetch posts" },
+      { status: 500 },
     );
   }
 }
@@ -23,8 +23,8 @@ export async function POST(request: Request) {
 
     // Check for spam
     const spamCheck = await fetch(`${process.env.BASE_URL}/api/check-spam`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ content }),
     });
 
@@ -32,8 +32,8 @@ export async function POST(request: Request) {
 
     if (isSpam) {
       return NextResponse.json(
-        { error: 'Message detected as spam' },
-        { status: 400 }
+        { error: "Message detected as spam" },
+        { status: 400 },
       );
     }
 
@@ -48,8 +48,8 @@ export async function POST(request: Request) {
     return NextResponse.json(post);
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to create post' },
-      { status: 500 }
+      { error: "Failed to create post" },
+      { status: 500 },
     );
   }
 }

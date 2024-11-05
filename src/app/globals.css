@@ -6,12 +6,16 @@
   body {
     @apply bg-party-green text-party-gold font-comic text-center m-0;
     background-image: 
-      /* Small flakes layer */ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='30' cy='40' r='1' fill='%23ffffff40'/%3E%3Ccircle cx='70' cy='70' r='1' fill='%23ffffff40'/%3E%3Ccircle cx='45' cy='85' r='1' fill='%23ffffff40'/%3E%3Ccircle cx='15' cy='25' r='1' fill='%23ffffff40'/%3E%3Ccircle cx='85' cy='55' r='1' fill='%23ffffff40'/%3E%3C/svg%3E"),
+      /* Small flakes layer */
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='30' cy='40' r='1' fill='%23ffffff40'/%3E%3Ccircle cx='70' cy='70' r='1' fill='%23ffffff40'/%3E%3Ccircle cx='45' cy='85' r='1' fill='%23ffffff40'/%3E%3Ccircle cx='15' cy='25' r='1' fill='%23ffffff40'/%3E%3Ccircle cx='85' cy='55' r='1' fill='%23ffffff40'/%3E%3C/svg%3E"),
       /* Medium flakes layer */
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='65' cy='25' r='1.5' fill='%23ffffff60'/%3E%3Ccircle cx='20' cy='60' r='1.5' fill='%23ffffff60'/%3E%3Ccircle cx='90' cy='80' r='1.5' fill='%23ffffff60'/%3E%3Ccircle cx='40' cy='30' r='1.5' fill='%23ffffff60'/%3E%3C/svg%3E"),
       /* Large flakes layer */
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='35' cy='15' r='2' fill='%23ffffff80'/%3E%3Ccircle cx='80' cy='45' r='2' fill='%23ffffff80'/%3E%3Ccircle cx='15' cy='85' r='2' fill='%23ffffff80'/%3E%3C/svg%3E");
-    background-size: 100px 100px, 120px 120px, 150px 150px;
+    background-size:
+      100px 100px,
+      120px 120px,
+      150px 150px;
     cursor: default;
     @apply animate-snowfall-1 animate-snowfall-2 animate-snowfall-3;
   }
@@ -50,33 +54,51 @@
 
 @keyframes snowfall-1 {
   from {
-    background-position: 0 0, 0 0, 0 0;
+    background-position:
+      0 0,
+      0 0,
+      0 0;
   }
   to {
-    background-position: 100px 1000px, 150px 1000px, -100px 1000px;
+    background-position:
+      100px 1000px,
+      150px 1000px,
+      -100px 1000px;
   }
 }
 
 @keyframes snowfall-2 {
   from {
-    background-position: 0 0, 0 0, 0 0;
+    background-position:
+      0 0,
+      0 0,
+      0 0;
   }
   to {
-    background-position: -150px 1000px, 100px 1000px, 200px 1000px;
+    background-position:
+      -150px 1000px,
+      100px 1000px,
+      200px 1000px;
   }
 }
 
 @keyframes snowfall-3 {
   from {
-    background-position: 0 0, 0 0, 0 0;
+    background-position:
+      0 0,
+      0 0,
+      0 0;
   }
   to {
-    background-position: -100px 1000px, 200px 1000px, -150px 1000px;
+    background-position:
+      -100px 1000px,
+      200px 1000px,
+      -150px 1000px;
   }
 }
 
 @font-face {
-  font-family: 'Comic Sans MS';
-  src: local('Comic Sans MS');
+  font-family: "Comic Sans MS";
+  src: local("Comic Sans MS");
   font-display: swap;
 }
