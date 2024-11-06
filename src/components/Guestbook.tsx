@@ -78,7 +78,7 @@ export default function Guestbook() {
           type="text"
           maxLength={20}
           placeholder="Your Party Name"
-          className="w-full p-2 border-2 border-red-600 rounded font-comic"
+          className="w-full p-2 border-2 border-red-600 rounded"
           value={formData.name}
           onChange={(e) =>
             setFormData((prev) => ({ ...prev, name: e.target.value }))
@@ -88,7 +88,7 @@ export default function Guestbook() {
         <textarea
           maxLength={100}
           placeholder="Your festive message!"
-          className="w-full p-2 border-2 border-red-600 rounded font-comic h-24"
+          className="w-full p-2 border-2 border-red-600 rounded h-24"
           value={formData.message}
           onChange={(e) =>
             setFormData((prev) => ({ ...prev, message: e.target.value }))
