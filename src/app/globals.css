@@ -18,6 +18,7 @@
       150px 150px;
     cursor: default;
     @apply animate-snowfall-1 animate-snowfall-2 animate-snowfall-3;
+    font-family: "Comic Sans MS", "Comic Sans", "ChalkboardSE-Regular", cursive;
   }
 }
 
@@ -99,6 +100,6 @@
 
 @font-face {
   font-family: "Comic Sans MS";
-  src: local("Comic Sans MS");
+  src: local("Comic Sans MS"), local("Comic-Sans-MS"), local("ComicSansMS");
   font-display: swap;
 }
