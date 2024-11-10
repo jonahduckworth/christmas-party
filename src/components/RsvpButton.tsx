@@ -30,7 +30,7 @@ export default function RsvpButton() {
   return (
     <div>
       <motion.div
-        animate={{ y: [-20, 0] }}
+        animate={{ y: [-30, 0] }}
         transition={{
           type: "spring",
           stiffness: 500,

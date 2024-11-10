@@ -86,20 +86,22 @@ export default function MusicPlayer() {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 bg-white/80 p-3 rounded-lg">
-      <button
-        onClick={toggleMusic}
-        className="hover:opacity-80 transition-opacity text-black"
-      >
-        🎵 {isPlaying ? "Pause Music" : "Play Music"}
-      </button>
-      <button
-        onClick={nextSong}
-        className="ml-2 hover:opacity-80 transition-opacity text-black"
-      >
-        ⏭️ Next
-      </button>
-      <div className="text-sm mt-1 text-gray-600">{currentSong.title}</div>
+    <div className="fixed bottom-3 right-3 bg-white/40 backdrop-blur-sm p-2 rounded-lg hover:bg-white/60 transition-colors">
+      <div className="flex items-center gap-1 text-xs text-gray-700">
+        <button
+          onClick={toggleMusic}
+          className="hover:opacity-80 transition-opacity"
+        >
+          {isPlaying ? "⏸️" : "▶️"}
+        </button>
+        <button
+          onClick={nextSong}
+          className="hover:opacity-80 transition-opacity"
+        >
+          ⏭️
+        </button>
+        <span className="max-w-[120px] truncate">{currentSong.title}</span>
+      </div>
       <audio
         ref={audioRef}
         loop

@@ -14,7 +14,7 @@ export async function POST(request: Request) {
     },
     body: JSON.stringify({
       system:
-        "You are a witty content moderator for a fun party planning app. Your job is to identify and flag harmful content while allowing playful, positive messages. Approve messages that spread joy and celebration, but catch any hate speech, harassment, explicit content, or malicious intent. Be lenient with harmless jokes and party themes.",
+        "You are a witty content moderator for a fun party planning app. Your job is to identify and flag harmful content while allowing playful, positive messages. Approve messages that spread joy and celebration, but catch any hate speech, harassment, explicit content, malicious intent, or inappropriate bathroom-related content and references. Be lenient with harmless jokes and party themes, but flag any crude bathroom humor or related names.",
       messages: [
         {
           role: "user",

@@ -33,20 +33,38 @@ export default function PartyDetails() {
 
   return (
     <motion.div
-      className="party-card"
+      className="party-card rounded-lg shadow-lg text-center"
       variants={containerVariants}
       initial="initial"
       animate={controls}
       whileHover="hovered"
       onClick={handleClick}
     >
-      <h2 className="text-xl font-bold mb-4">
+      <h2 className="text-2xl font-bold mb-8">
         🎅 Join us for Holiday Cheer! 🎅
       </h2>
-      <div className="space-y-2">
-        <p>Date: December 14th</p>
-        <p>Time: 7:00 PM</p>
-        <p>Location: Sam & Jonah&apos;s House</p>
+
+      <div className="space-y-8">
+        <div className="text-lg">
+          <p>
+            <strong>Date:</strong> December 14th
+          </p>
+          <p>
+            <strong>Time:</strong> 7:00 PM
+          </p>
+          <p>
+            <strong>Location:</strong> Sam & Jonah&apos;s House
+          </p>
+        </div>
+
+        <div>
+          <strong className="text-lg">What to bring:</strong>
+          <ul className="mt-2 space-y-2">
+            <li>• Festive Holiday Attire</li>
+            <li>• Secret Santa gift</li>
+            <li>• Sharable food item</li>
+          </ul>
+        </div>
       </div>
     </motion.div>
   );

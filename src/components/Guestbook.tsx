@@ -66,7 +66,7 @@ export default function Guestbook() {
   };
 
   return (
-    <div className="bg-white/90 border-4 border-[#ffd700] p-5 my-5 max-w-2xl mx-auto text-[#006400]">
+    <div className="guestbook-card">
       <h2 className="text-2xl font-bold mb-4">✨ Festive Guestbook ✨</h2>
       <p className="mb-4">
         Leave a message about what kind of boozy gift you might bring! (No

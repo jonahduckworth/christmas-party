@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function Rules() {
+export default function PartyRules() {
   const rules = [
     "Bring one wrapped alcoholic gift (value $20-30)",
     "Include any mixers/garnishes/snacks that go with your drink!",
@@ -12,7 +12,7 @@ export default function Rules() {
 
   return (
     <div className="rules-card">
-      <h2 className="text-xl font-bold mb-4 text-center">
+      <h2 className="text-lg md:text-xl font-bold mb-4 text-center">
         🎁 Secret Santa Booze Exchange Rules! 🍺
       </h2>
       <ul className="space-y-2">

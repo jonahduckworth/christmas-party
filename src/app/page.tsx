@@ -6,8 +6,9 @@ import {
   MarqueeBanner,
   MusicPlayer,
   PartyDetails,
+  PartyRules,
+  PartyTheme,
   RsvpButton,
-  Rules,
 } from "@/components";
 
 export default function Home() {
@@ -17,7 +18,8 @@ export default function Home() {
         <h1 className="party-title">🎄 The Christmas Party 🎄</h1>
         <MarqueeBanner />
         <PartyDetails />
-        <Rules />
+        <PartyRules />
+        <PartyTheme />
         <Guestbook />
         <CountdownTimer />
         <RsvpButton />
