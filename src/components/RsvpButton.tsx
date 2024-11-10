@@ -21,7 +21,9 @@ export default function RsvpButton() {
     });
 
     if (response.ok) {
-      alert("RSVP successful! Don't forget your boozy gift! 🎁🍸");
+      alert(
+        "RSVP successful! You will receive an email with the location closer to the party date 🎄🍺",
+      );
       setShowForm(false);
       setFormData({ firstName: "", lastName: "", email: "" });
     }
