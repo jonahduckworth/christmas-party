@@ -1,16 +1,24 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## Prerequisites
 
-First, run the development server:
+Make sure you have [Bun](https://bun.sh) installed on your system. If not, you can install it with:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+curl -fsSL https://bun.sh/install | bash
+```
+
+## Getting Started
+
+First, install the dependencies:
+
+```bash
+bun install
+```
+
+Then, run the development server:
+
+```bash
 bun dev
 ```
 
