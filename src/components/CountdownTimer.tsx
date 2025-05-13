@@ -16,7 +16,8 @@ export default function CountdownTimer() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      const partyDate = new Date("December 14, 2024 19:00:00 MST");
+      const currentYear = new Date().getFullYear();
+      const partyDate = new Date(`December 14, ${currentYear} 19:00:00 MST`);
       const now = new Date();
 
       setTimeLeft({
